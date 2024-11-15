@@ -1,13 +1,7 @@
-import express from 'express';
+import express from "express";
+import routes from "./routes/index.js";
 
 const app = express();
-
-app.use(express.json());
-
-app.get('/test', (req, res) => {
-  res
-    .status(200)
-    .send({ mensagem: 'Hello World' });
-});
+routes(app);
 
 export default app;
